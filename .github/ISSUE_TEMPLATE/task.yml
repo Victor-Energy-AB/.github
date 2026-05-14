@@ -1,0 +1,74 @@
+name: Task
+description: General development task or work item
+title: "[TASK] "
+labels:
+  - task
+
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: 🧩 Description
+      placeholder: What needs to be done?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: 🏷️ Task type
+      options:
+        - Development
+        - Refactor
+        - Research
+        - DevOps
+        - Data / Migration
+    validations:
+      required: true
+
+  - type: dropdown
+    id: component
+    attributes:
+      label: 🧱 Component
+      options:
+        - SPA
+        - API
+        - Database
+        - RabbitMQ
+        - n8n
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: ⚡ Priority
+      options:
+        - Low
+        - Medium
+        - High
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: ✅ Acceptance criteria
+      placeholder: |
+        - [ ] Step 1
+        - [ ] Step 2
+        - [ ] Step 3
+    validations:
+      required: true
+
+  - type: textarea
+    id: related
+    attributes:
+      label: 🔗 Related issues
+      placeholder: Link feature/bug this task belongs to
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: 📝 Notes

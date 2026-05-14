@@ -1,0 +1,82 @@
+name: Feature / Epic
+description: Propose a new feature or larger initiative
+title: "[FEATURE] "
+labels:
+  - enhancement
+
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: 🎯 Problem statement
+      description: What problem are we trying to solve?
+      placeholder: Describe the pain point or opportunity
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: 💡 Proposed solution
+      description: High-level description of the solution
+      placeholder: What should we build?
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: 📦 Scope
+      description: What is in scope vs out of scope?
+      placeholder: |
+        In scope:
+        - 
+        
+        Out of scope:
+        - 
+
+  - type: dropdown
+    id: component
+    attributes:
+      label: 🧱 Component
+      options:
+        - SPA
+        - API
+        - Database
+        - RabbitMQ
+        - n8n
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: ⚡ Priority
+      options:
+        - Low
+        - Medium
+        - High
+        - Critical
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: ✅ Acceptance criteria
+      placeholder: |
+        - [ ] Criteria 1
+        - [ ] Criteria 2
+        - [ ] Criteria 3
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: 🔗 Dependencies / Related work
+      placeholder: Any related issues, systems, or blockers
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: 📝 Additional notes
