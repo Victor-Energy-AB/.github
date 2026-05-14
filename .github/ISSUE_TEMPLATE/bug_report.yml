@@ -1,71 +1,68 @@
-name: Bug Report
-description: Report a bug or unexpected behavior
+name: Bug
+description: Report a bug or problem
 title: "[BUG] "
 labels:
   - bug
-
 body:
   - type: textarea
     id: description
     attributes:
-      label: 🧩 What happened?
-      description: Clear, short description of the issue
-      placeholder: Something isn't working as expected...
+      label: Description
+      description: Describe the bug you encountered.
+      placeholder: What is broken or not working?
     validations:
       required: true
 
   - type: textarea
     id: steps
     attributes:
-      label: 🔁 Steps to reproduce
+      label: Steps to Reproduce
+      description: List the steps to reproduce the issue, if applicable.
       placeholder: |
-        1. Go to...
-        2. Click on...
-        3. See error
+        1. Go to ...
+        2. Click ...
+        3. See problem.
     validations:
-      required: true
-
-  - type: textarea
-    id: expected
-    attributes:
-      label: ✅ Expected behavior
-      placeholder: What should have happened?
-    validations:
-      required: true
-
-  - type: textarea
-    id: actual
-    attributes:
-      label: ❌ Actual behavior
-      placeholder: What actually happened?
-    validations:
-      required: true
+      required: false
 
   - type: dropdown
-    id: environment
+    id: module
     attributes:
-      label: 🖥️ Environment
+      label: Module
+      description: Which module/component does this bug relate to?
       options:
-        - Dev
-        - QA
-        - Prod
+        - new
+        - general
+        - construction tracking
+        - quality documents
+        - maps
+        - timesheets
+        - daily reporting
+        - invoicing
+        - fleet
+        - admin
+        - reporting
+        - analytics
     validations:
       required: true
 
-  - type: input
-    id: version
+  - type: textarea
+    id: release_notes
     attributes:
-      label: 🔢 Version / Build (optional)
-      placeholder: e.g. v1.4.2
+      label: Release Notes Description
+      description: Write what should appear in the release notes if this is closed.
+      placeholder: Summary for release notes.
 
   - type: textarea
-    id: logs
+    id: screenshots
     attributes:
-      label: 📸 Screenshots / Logs
-      description: Paste any relevant logs or screenshots
+      label: Screenshots
+      description: You can paste images or upload screenshots here.
+      placeholder: Drag and drop or paste screenshots, if helpful.
 
   - type: textarea
-    id: notes
+    id: documentation
     attributes:
-      label: 📝 Additional notes
-      placeholder: Anything else that might help
+      label: Backup Documentation
+      description: Add or link to any backup documentation relevant to this bug.
+      placeholder: Attach files or paste links to additional documentation.
