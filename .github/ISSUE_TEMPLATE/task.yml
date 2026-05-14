@@ -1,74 +1,56 @@
 name: Task
-description: General development task or work item
+description: Track a specific task or chore
 title: "[TASK] "
 labels:
   - task
-
 body:
   - type: textarea
     id: description
     attributes:
-      label: 🧩 Description
+      label: Description
+      description: Describe the task to be completed.
       placeholder: What needs to be done?
     validations:
       required: true
 
   - type: dropdown
-    id: type
+    id: module
     attributes:
-      label: 🏷️ Task type
+      label: Module
+      description: Which module/component does this task relate to?
       options:
-        - Development
-        - Refactor
-        - Research
-        - DevOps
-        - Data / Migration
-    validations:
-      required: true
-
-  - type: dropdown
-    id: component
-    attributes:
-      label: 🧱 Component
-      options:
-        - SPA
-        - API
-        - Database
-        - RabbitMQ
-        - n8n
-        - Other
-    validations:
-      required: true
-
-  - type: dropdown
-    id: priority
-    attributes:
-      label: ⚡ Priority
-      options:
-        - Low
-        - Medium
-        - High
+        - new
+        - general
+        - construction tracking
+        - quality documents
+        - maps
+        - timesheets
+        - daily reporting
+        - invoicing
+        - fleet
+        - admin
+        - reporting
+        - analytics
     validations:
       required: true
 
   - type: textarea
-    id: acceptance
+    id: release_notes
     attributes:
-      label: ✅ Acceptance criteria
-      placeholder: |
-        - [ ] Step 1
-        - [ ] Step 2
-        - [ ] Step 3
-    validations:
-      required: true
+      label: Release Notes Description
+      description: Write what should appear in the release notes if this is closed.
+      placeholder: Summary for release notes.
 
   - type: textarea
-    id: related
+    id: screenshots
     attributes:
-      label: 🔗 Related issues
-      placeholder: Link feature/bug this task belongs to
+      label: Screenshots
+      description: You can paste images or upload screenshots here.
+      placeholder: Drag and drop or paste screenshots, if helpful.
 
   - type: textarea
-    id: notes
+    id: documentation
     attributes:
-      label: 📝 Notes
+      label: Backup Documentation
+      description: Add or link to any backup documentation relevant to this task.
+      placeholder: Attach files or paste links to additional documentation.
