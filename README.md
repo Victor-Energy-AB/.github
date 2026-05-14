@@ -2,3 +2,4 @@
 Github automation repo
 
 Test
+Contributing
