@@ -1,82 +1,56 @@
-name: Feature / Epic
-description: Propose a new feature or larger initiative
+name: Feature
+description: Propose a new feature or enhancement
 title: "[FEATURE] "
 labels:
   - enhancement
-
 body:
   - type: textarea
-    id: problem
+    id: description
     attributes:
-      label: 🎯 Problem statement
-      description: What problem are we trying to solve?
-      placeholder: Describe the pain point or opportunity
-    validations:
-      required: true
-
-  - type: textarea
-    id: solution
-    attributes:
-      label: 💡 Proposed solution
-      description: High-level description of the solution
-      placeholder: What should we build?
-    validations:
-      required: true
-
-  - type: textarea
-    id: scope
-    attributes:
-      label: 📦 Scope
-      description: What is in scope vs out of scope?
-      placeholder: |
-        In scope:
-        - 
-        
-        Out of scope:
-        - 
-
-  - type: dropdown
-    id: component
-    attributes:
-      label: 🧱 Component
-      options:
-        - SPA
-        - API
-        - Database
-        - RabbitMQ
-        - n8n
-        - Other
+      label: Description
+      description: Describe the feature or enhancement you are requesting.
+      placeholder: Please describe the requested feature.
     validations:
       required: true
 
   - type: dropdown
-    id: priority
+    id: module
     attributes:
-      label: ⚡ Priority
+      label: Module
+      description: Which module/component does this feature relate to?
       options:
-        - Low
-        - Medium
-        - High
-        - Critical
+        - new
+        - general
+        - construction tracking
+        - quality documents
+        - maps
+        - timesheets
+        - daily reporting
+        - invoicing
+        - fleet
+        - admin
+        - reporting
+        - analytics
     validations:
       required: true
 
   - type: textarea
-    id: acceptance
+    id: release_notes
     attributes:
-      label: ✅ Acceptance criteria
-      placeholder: |
-        - [ ] Criteria 1
-        - [ ] Criteria 2
-        - [ ] Criteria 3
+      label: Release Notes Description
+      description: Write what should appear in the release notes if this is closed.
+      placeholder: Summary for release notes.
 
   - type: textarea
-    id: dependencies
+    id: screenshots
     attributes:
-      label: 🔗 Dependencies / Related work
-      placeholder: Any related issues, systems, or blockers
+      label: Screenshots
+      description: You can paste images or upload screenshots here.
+      placeholder: Drag and drop or paste screenshots, if helpful.
 
   - type: textarea
-    id: notes
+    id: documentation
     attributes:
-      label: 📝 Additional notes
+      label: Backup Documentation
+      description: Add or link to any backup documentation relevant to this feature.
+      placeholder: Attach files or paste links to additional documentation.
