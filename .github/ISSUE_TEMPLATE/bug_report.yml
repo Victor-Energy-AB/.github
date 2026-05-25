@@ -1,6 +1,6 @@
 name: Bug
 description: Report a bug or problem
-title: "[BUG] "
+title: "BUG "
 labels:
   - bug
 body:
@@ -43,6 +43,7 @@ body:
         - admin
         - reporting
         - analytics
+        - bids & tenders
     validations:
       required: true
 
