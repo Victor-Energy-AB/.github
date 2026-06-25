@@ -1,0 +1,77 @@
+name: EPIC
+description: Track a large initiative made up of multiple tasks
+title: "EPIC - "
+labels:
+  - epic
+body:
+  - type: textarea
+    id: objective
+    attributes:
+      label: Objective
+      description: Describe the overall goal of this EPIC.
+      placeholder: What outcome are we trying to achieve?
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Scope / Description
+      description: Summarize what is included in this EPIC.
+      placeholder: What work is in scope for this EPIC?
+    validations:
+      required: true
+
+  - type: text
+    id: requestor
+    attributes:
+      label: Requestor
+      description: The individual making request
+      
+  - type: dropdown
+    id: department
+    attributes:
+      label: Department
+      description: Which department does this EPIC relate to?
+      options:
+        - construction
+        - finance
+        - fleet
+        - hse
+        - sales and marketing
+        - hr
+        - it
+        - operations
+        - other
+        - n/a
+    validations:
+      required: true
+
+  - type: dropdown
+    id: module
+    attributes:
+      label: Module
+      description: Which module/component does this EPIC relate to?
+      options:
+        - new
+        - general
+        - construction tracking
+        - quality documents
+        - maps
+        - timesheets
+        - daily reporting
+        - invoicing
+        - fleet
+        - admin
+        - reporting
+        - analytics
+        - bids & tenders
+    validations:
+      required: true
+
+  - type: textarea
+    id: documentation
+    attributes:
+      label: Backup Documentation
+      description: Add or link to any supporting documentation relevant to this EPIC.
+      placeholder: Attach files or paste links to additional documentation.
