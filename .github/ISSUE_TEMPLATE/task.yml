@@ -1,6 +1,6 @@
 name: Task
 description: Track a specific task or chore
-title: "TASK "
+title: "TASK - "
 labels:
   - task
 body:
