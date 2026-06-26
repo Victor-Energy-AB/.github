@@ -22,7 +22,7 @@ body:
     validations:
       required: true
 
-  - type: text
+  - type: input
     id: requestor
     attributes:
       label: Requestor
