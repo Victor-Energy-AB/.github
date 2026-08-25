@@ -32,6 +32,7 @@ body:
         - reporting
         - analytics
         - bids & tenders
+        - hse
     validations:
       required: true
 
