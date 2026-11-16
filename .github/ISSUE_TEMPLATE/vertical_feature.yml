@@ -1,0 +1,55 @@
+name: Vertical Feature
+description: Create an end-to-end, user-facing feature
+title: "[Feature]: "
+labels:
+  - feature
+type: feature
+
+body:
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Outcome
+      description: Describe who needs the feature, what they need, and why.
+      placeholder: |
+        As a Field Supervisor, I need to create and submit a plan for
+        the next workday so that it can be compiled into the project report.
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: List the functionality included in this issue.
+      placeholder: |
+        - Create and edit a draft plan
+        - Select activities and work locations
+        - Record planned quantities, personnel, and equipment
+        - Submit the completed plan
+    validations:
+      required: true
+
+  - type: textarea
+    id:  acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: List the observable conditions required to complete the issue.
+      placeholder: |
+        - [ ] An authorized user can create and edit a draft
+        - [ ] Activities use existing Construction Tracker data
+        - [ ] Quantities and counts cannot be negative
+        - [ ] A completed plan can be submitted
+        - [ ] Submitted plans are read-only unless reopened
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes and Dependencies
+      description: Include technical constraints, related issues, and dependencies.
+      placeholder: |
+        - Parent issue: #123
+        - Reuse existing activity and location identifiers
+        - M-Files transmission is covered by a separate issue
