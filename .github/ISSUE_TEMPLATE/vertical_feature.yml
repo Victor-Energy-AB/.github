@@ -1,19 +1,42 @@
-name: Vertical Feature
-description: Create an end-to-end, user-facing feature
-title: "[Feature]: "
+name: Feature
+description: Propose a new feature or enhancement
+title: "FEATURE - "
 labels:
-  - feature
+  - enhancement
 type: feature
 
 body:
   - type: textarea
-    id: outcome
+    id: description
     attributes:
-      label: Outcome
-      description: Describe who needs the feature, what they need, and why.
+      label: Description
+      description: Describe the requested feature, who needs it, and the outcome it should provide.
       placeholder: |
-        As a Field Supervisor, I need to create and submit a plan for
-        the next workday so that it can be compiled into the project report.
+        As a [user or role], I need [capability] so that [business outcome].
+
+        Include any relevant background or business context.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: module
+    attributes:
+      label: Module
+      description: Which module or component does this feature relate to?
+      options:
+        - new
+        - general
+        - construction tracking
+        - quality documents
+        - maps
+        - timesheets
+        - daily reporting
+        - invoicing
+        - fleet
+        - admin
+        - reporting
+        - analytics
+        - bids & tenders
     validations:
       required: true
 
@@ -21,35 +44,57 @@ body:
     id: scope
     attributes:
       label: Scope
-      description: List the functionality included in this issue.
+      description: List the functionality included in this feature or vertical slice.
       placeholder: |
-        - Create and edit a draft plan
-        - Select activities and work locations
-        - Record planned quantities, personnel, and equipment
-        - Submit the completed plan
+        - Create and edit the record
+        - Select applicable project activities and locations
+        - Submit the completed record
+        - Retain audit information
     validations:
       required: true
 
   - type: textarea
-    id:  acceptance-criteria
+    id: acceptance_criteria
     attributes:
       label: Acceptance Criteria
-      description: List the observable conditions required to complete the issue.
+      description: List the observable conditions that must be met before this issue is complete.
       placeholder: |
-        - [ ] An authorized user can create and edit a draft
-        - [ ] Activities use existing Construction Tracker data
-        - [ ] Quantities and counts cannot be negative
-        - [ ] A completed plan can be submitted
-        - [ ] Submitted plans are read-only unless reopened
+        - [ ] An authorized user can create and edit the record
+        - [ ] Required fields are validated
+        - [ ] Existing project data is reused where applicable
+        - [ ] Unauthorized users cannot modify the record
+        - [ ] The completed workflow has been tested
     validations:
       required: true
 
   - type: textarea
-    id: notes
+    id: dependencies
     attributes:
-      label: Notes and Dependencies
-      description: Include technical constraints, related issues, and dependencies.
+      label: Dependencies and Notes
+      description: Add related issues, dependencies, constraints, or existing patterns that should be followed.
       placeholder: |
         - Parent issue: #123
-        - Reuse existing activity and location identifiers
-        - M-Files transmission is covered by a separate issue
+        - Depends on: #456
+        - Reuse existing Construction Tracker activity identifiers
+        - M-Files transmission is handled in a separate issue
+
+  - type: textarea
+    id: release_notes
+    attributes:
+      label: Release Notes Description
+      description: Describe what should appear in the release notes when this feature is completed.
+      placeholder: Brief user-facing summary of the completed feature.
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: Paste images, mockups, or screenshots that help explain the requested feature.
+      placeholder: Drag and drop or paste screenshots, if helpful.
+
+  - type: textarea
+    id: documentation
+    attributes:
+      label: Backup Documentation
+      description: Add or link to any supporting documentation relevant to this feature.
+      placeholder: Attach files or paste links to supporting documentation.
